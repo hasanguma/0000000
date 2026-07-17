@@ -103,6 +103,9 @@ const App = () => {
             {[['home','الرئيسية'],['about','من نحن'],['services','خدماتنا'],['gallery','المعرض'],['videos','فيديو'],['testimonials','آراء'],['contact','تواصل']].map(([id,label]) => (
               <a key={id} href={`#${id}`} className="text-white/80 hover:text-yellow-400 transition-colors font-medium">{label}</a>
             ))}
+            <a href="/admin" className="flex items-center gap-1 text-yellow-400/70 hover:text-yellow-400 transition-colors font-medium">
+              <span className="text-xs">🔒</span>لوحة التحكم
+            </a>
           </div>
           <div className="flex items-center gap-3">
             <a href={`tel:${c.contact.phone}`} className="hidden md:flex">
@@ -124,6 +127,9 @@ const App = () => {
             {[['home','الرئيسية'],['about','من نحن'],['services','خدماتنا'],['gallery','المعرض'],['videos','فيديو'],['testimonials','آراء'],['contact','تواصل']].map(([id,label]) => (
               <a key={id} href={`#${id}`} onClick={()=>setMenuOpen(false)} className="text-2xl font-bold text-white py-4 border-b border-yellow-500/10 hover:text-yellow-400">{label}</a>
             ))}
+            <a href="/admin" onClick={()=>setMenuOpen(false)} className="flex items-center gap-2 text-xl font-bold text-yellow-400 py-4 border-b border-yellow-500/10 hover:text-yellow-300 mt-4">
+              🔒 لوحة التحكم
+            </a>
           </motion.div>
         )}
       </AnimatePresence>
