@@ -48,3 +48,8 @@ next-env.d.ts
 /tests/
 node_modules/@next/swc-linux-x64-gnu/next-swc.linux-x64-gnu.node
 node_modules/@next/swc-linux-x64-musl/next-swc.linux-x64-musl.node
+.env.*
+*.env
+credentials.json
+*.key
+.credentials
