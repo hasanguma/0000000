@@ -11,11 +11,11 @@ const cairo = Cairo({
 
 async function getSeo() {
   try {
-    const base = process.env.NEXT_PUBLIC_BASE_URL || '';
-    const res = await fetch(`${base}/api/content`, { cache: 'no-store' });
-    if (!res.ok) return null;
-    const data = await res.json();
-    return data?.seo || null;
+    if (!process.env.MONGO_URL) return null;
+    const { getDb } = await import('@/lib/mongodb');
+    const db = await getDb();
+    const doc = await db.collection('content').findOne({ _id: 'site' });
+    return doc?.seo || null;
   } catch (e) {
     return null;
   }
