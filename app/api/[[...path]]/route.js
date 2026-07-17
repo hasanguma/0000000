@@ -8,6 +8,9 @@ const COLLECTION = 'content';
 const SUBMISSIONS = 'submissions';
 const SESSIONS = 'sessions';
 
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 function json(data, status = 200) {
   return NextResponse.json(data, {
     status,

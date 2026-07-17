@@ -81,11 +81,19 @@ const Admin = () => {
       if (Array.isArray(items) && items.length) {
         const existing = new Set((content.videos || []).map(v => v.videoId));
         const fresh = items.filter(v => !existing.has(v.videoId)).map(v => ({ ...v, addedAt: v.addedAt || Date.now() }));
-        setContent(prev => ({ ...prev, videos: [...fresh, ...(prev.videos || [])] }));
-        toast.success(`تمت إضافة ${fresh.length} فيديو`);
+        const newVideos = [...fresh, ...(content.videos || [])];
+        setContent(prev => ({ ...prev, videos: newVideos }));
+        // Auto-save so it appears on the site immediately
+        try {
+          const body = { ...content, videos: newVideos }; delete body._id;
+          await fetch('/api/content', { method: 'PUT', headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` }, body: JSON.stringify(body) });
+          toast.success(`تمت إضافة ${fresh.length} فيديو وحُفظت تلقائياً ✔`);
+        } catch (e) {
+          toast.warning(`تمت إضافة ${fresh.length} فيديو - لا تنسَ الضغط على "حفظ"`);
+        }
         setYtUrl('');
       } else {
-        toast.error('لم يتم العثور على فيديوهات');
+        toast.error('لم يتم العثور على فيديوهات - تحقق من الرابط');
       }
     } catch (e) { toast.error('فشل جلب الفيديوهات'); }
     setYtLoading(false);

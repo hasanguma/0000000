@@ -40,7 +40,7 @@ const App = () => {
   const heroScale = useTransform(scrollY, [0, 500], [1, 1.1]);
 
   useEffect(() => {
-    fetch('/api/content').then(r => r.json()).then(d => {
+    fetch('/api/content', { cache: 'no-store' }).then(r => r.json()).then(d => {
       setContent(d);
       setTimeout(() => setLoading(false), 600);
     }).catch(() => setLoading(false));
@@ -311,7 +311,7 @@ const App = () => {
             <p className="text-yellow-400 font-semibold tracking-widest mb-3">فيديو</p>
             <h2 className="text-4xl md:text-5xl font-black mb-4"><span className="gold-text">من أحدث حفلاتنا</span></h2>
           </div>
-          <div className={`grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-${c.youtubeSettings?.columns||3}`}>
+          <div className={`grid gap-6 grid-cols-1 md:grid-cols-2 ${c.youtubeSettings?.columns===4?'lg:grid-cols-4':c.youtubeSettings?.columns===2?'lg:grid-cols-2':c.youtubeSettings?.columns===1?'lg:grid-cols-1':'lg:grid-cols-3'}`}>
             {(c.videos||[]).slice(0, c.youtubeSettings?.maxVideos||12).sort((a,b)=>(b.addedAt||0)-(a.addedAt||0)).map(v=>{
               const vid = v.videoId || getYouTubeId(v.url);
               return (
