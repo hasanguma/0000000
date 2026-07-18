@@ -1,0 +1,55 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# local env files
+.env
+.env.local
+.env*.local
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# logs
+/var/log/
+*.log
+
+# editor
+.vscode/
+.idea/
+
+# test artifacts
+/test_result.md
+/tests/
+node_modules/@next/swc-linux-x64-gnu/next-swc.linux-x64-gnu.node
+node_modules/@next/swc-linux-x64-musl/next-swc.linux-x64-musl.node
+.env.*
+*.env
+credentials.json
+*.key
+.credentials
