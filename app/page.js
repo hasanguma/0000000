@@ -42,7 +42,7 @@ const SmartChatbot = ({ isOpen, onClose, contactPhone, contactWhatsapp }) => {
   const [botTyping, setBotTyping] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-  const eventTypes = ['حنة', 'عرس', 'دي جي', 'عرس مع مطرب', 'صبيب قهرة عربية', 'طباخ', 'مقدم', 'حفلات أخرى'];
+  const eventTypes = ['حنة', 'عرس', 'دي جي', 'عرس مع مطرب', 'صبيب قهرة عربية', 'طبال', 'مقدم', 'حفلات أخرى'];
 
   const questions = [
     { label: 'ما اسمك أو عنوانك؟', field: 'name', type: 'text' },
