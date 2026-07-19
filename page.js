@@ -12,7 +12,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Card } from '@/components/ui/card';
 import { Dialog, DialogContent } from '@/components/ui/dialog';
-import { toast } from 'sonner';
+import { toast } from '@/hooks/use-toast';
 import { useTheme } from '@/components/theme-provider';
 import SmartAssistantChat from '@/components/SmartAssistantChat';
 

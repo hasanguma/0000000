@@ -7,8 +7,8 @@ import { Card } from '@/components/ui/card';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { Label } from '@/components/ui/label';
 import { Switch } from '@/components/ui/switch';
-import { toast } from 'sonner';
-import { Lock, Save, Plus, Trash2, RefreshCw, LogOut, Youtube, Image as ImageIcon, ExternalLink, Home, Info, Wrench, Grid3x3, Video, Star, Phone, Share2, Search, ChevronsUp, Upload } from 'lucide-react';
+import { toast } from '@/hooks/use-toast';
+import { Lock, Save, Plus, Trash2, RefreshCw, LogOut, Video, Image as ImageIcon, ExternalLink, Home, Info, Wrench, Grid3x3, Play, Star, Phone, Share2, Search, ChevronsUp, Upload } from 'lucide-react';
 import { v4 as uuidv4 } from 'uuid';
 import CloudinaryUpload from '@/components/CloudinaryUpload';
 

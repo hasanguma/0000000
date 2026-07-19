@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { Bot, CheckCircle2, MessageCircle, Send, Sparkles, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { toast } from 'sonner';
+import { toast } from '@/hooks/use-toast';
 
 const STORAGE_KEYS = {
   requests: 'smart_chat_requests',

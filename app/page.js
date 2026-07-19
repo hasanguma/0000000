@@ -3,7 +3,7 @@ import { useEffect, useState, useRef } from 'react';
 import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
 import {
   Phone, MessageCircle, Mail, MapPin, Play, X, ChevronUp, Star,
-  Instagram, Facebook, Youtube, Send, Music, Sparkles, Award, Users,
+  Camera, Users, Video, Send, Music, Sparkles, Award,
   Speaker, Disc3, Heart, GraduationCap, Mic, Lightbulb, Theater, Monitor,
   Menu, ArrowLeft, ZoomIn, Sun, Moon
 } from 'lucide-react';
@@ -12,7 +12,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Card } from '@/components/ui/card';
 import { Dialog, DialogContent } from '@/components/ui/dialog';
-import { toast } from 'sonner';
+import { toast } from '@/hooks/use-toast';
 import { useTheme } from '@/components/theme-provider';
 
 const ICONS = { Speaker, Disc3, Heart, GraduationCap, Mic, Lightbulb, Theater, Monitor, Sparkles, Award, Users, Music };

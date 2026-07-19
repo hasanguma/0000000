@@ -2,7 +2,7 @@
 import { useRef, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Upload, Loader2, CheckCircle2, X, Image as ImageIcon, Video } from 'lucide-react';
-import { toast } from 'sonner';
+import { toast } from '@/hooks/use-toast';
 
 /**
  * CloudinaryUpload - reusable component for uploading images/videos to Cloudinary
