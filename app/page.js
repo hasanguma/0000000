@@ -46,7 +46,7 @@ const SmartChatbot = ({ isOpen, onClose, contactPhone, contactWhatsapp }) => {
 
   const questions = [
     { label: 'ما اسمك أو عنوانك؟', field: 'name', type: 'text' },
-    { label: 'نوع الحفل المطلوب؟', field: 'eventType', type: 'select' },
+    { label: 'نوع الحجز المطلوب؟', field: 'eventType', type: 'select' },
     { label: 'الموعد الذي ترغب بالحجز فيه؟', field: 'date', type: 'date' },
     { label: 'هل لديك أي تفاصيل إضافية أو خواص خاصة؟', field: 'details', type: 'textarea' }
   ];
