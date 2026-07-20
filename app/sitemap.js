@@ -9,7 +9,7 @@ export default async function sitemap() {
       priority: 1.0,
     },
     {
-      url: `${baseUrl}/admin`,
+   url: baseUrl + '/admin',
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.5,
